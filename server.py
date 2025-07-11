@@ -11,7 +11,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-@app.route('/health')
+@app.route('/')
 def health_check():
     """Simple health check endpoint"""
     return {'status': 'healthy'}, 200
