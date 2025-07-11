@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Health check (runs every 30 seconds, timeout after 5s, start after 10s)
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s \
-    CMD curl -f http://localhost:8000/health || exit 1
+#HEALTHCHECK --interval=30s --timeout=5s --start-period=10s \
+    #CMD curl -f http://localhost:8000/health || exit 1
 
 # Run both the bot and health check server
-CMD python server.py & python uploader_bot.py
+CMD python server.py & python bot.py
