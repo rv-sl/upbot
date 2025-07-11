@@ -19,9 +19,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Bot configuration from environment variables
-TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TOKEN = os.getenv('tk')
 MAX_FILE_SIZE = 2000 * 1024 * 1024  # 2GB (Telegram's limit)
-ALLOWED_USERS = os.getenv('ALLOWED_USERS', '').split(',') if os.getenv('ALLOWED_USERS') else []
+ALLOWED_USERS = os.getenv('auth', '').split(',') if os.getenv('ALLOWED_USERS') else []
 RATE_LIMIT = int(os.getenv('RATE_LIMIT', '3'))  # Max downloads per minute per user
 
 # Global variables
